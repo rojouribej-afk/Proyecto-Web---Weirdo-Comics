@@ -1,0 +1,437 @@
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: #fff;
+      color: #333;
+      padding: 24px;
+    }
+
+    /* 2. Título de la pantalla */
+    .titulo-pantalla {
+      color: #2f5a8f;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    /* Contenedor del formulario sin tarjeta */
+    .tarjeta {
+      background: transparent;
+      min-height: 480px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+
+    /* 4. Formulario centrado */
+    .login {
+      width: 100%;
+      max-width: 360px;
+      text-align: center;
+    }
+
+    .login h1 {
+      color: #c00000;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .login .subtitulo {
+      color: #aaa;
+      font-size: 13px;
+      margin: 14px 0 32px;
+    }
+
+    /* 5. Campos */
+    .campo {
+      text-align: left;
+      margin-bottom: 14px;
+    }
+
+    .campo label {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    .campo input {
+      width: 100%;
+      padding: 11px 12px;
+      font-size: 14px;
+      border: 1px solid #dde2ea;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    .campo input::placeholder { color: #aaa; }
+
+    .campo input:focus {
+      border-color: #2f5a8f;
+      box-shadow: 0 0 0 3px rgba(47, 90, 143, 0.2);
+    }
+
+    /* 6. Botón */
+    .btn {
+      width: 100%;
+      padding: 12px;
+      margin-top: 4px;
+      background: #2f5a8f;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn:hover { background: #264b77; }
+
+    /* 7. Enlace de recuperación */
+    .recuperar {
+      margin-top: 22px;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    .recuperar a {
+      color: #2f5a8f;
+      text-decoration: underline;
+    }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: #eef1f6;
+      color: #333;
+      font-size: 13px;
+    }
+
+    /* 2. Barra superior */
+    .topbar {
+      background: #35629a;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+    }
+
+    .topbar .marca { font-weight: 700; font-size: 14px; }
+    .topbar .sesion { font-size: 11px; }
+    .topbar .sesion a { color: #fff; text-decoration: none; }
+    .topbar .sesion a:hover { text-decoration: underline; }
+
+    /* 3. Estructura: menú lateral + contenido */
+    .layout {
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+      align-items: flex-start;
+    }
+
+    /* 4. Menú lateral */
+    .menu {
+      width: 125px;
+      flex-shrink: 0;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+      list-style: none;
+    }
+
+    .menu li { border-bottom: 1px solid #eee; }
+    .menu li:last-child { border-bottom: none; }
+
+    .menu a {
+      display: block;
+      padding: 8px 10px;
+      font-size: 11px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .menu a:hover { background: #f3f6fa; }
+
+    /* 5. Contenido principal */
+    .contenido {
+      flex: 1;
+      min-width: 0;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+      padding: 24px 22px;
+    }
+
+    .contenido h2 {
+      color: #2f5a8f;
+      font-size: 20px;
+      font-weight: 800;
+      margin-bottom: 14px;
+    }
+
+    .contenido h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    /* 6. Tarjetas de estadísticas */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .stat {
+      background: linear-gradient(135deg, #35629a, #264b77);
+      color: #fff;
+      text-align: center;
+      padding: 18px 10px;
+      border-radius: 6px;
+    }
+
+    .stat span { display: block; font-size: 11px; opacity: 0.9; }
+    .stat strong { display: block; font-size: 24px; margin-top: 6px; }
+
+    /* 7. Área del gráfico */
+    .grafico {
+      background: #f0f0f0;
+      color: #888;
+      border-radius: 6px;
+      height: 145px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+    }
+
+    /* 8. Tabla */
+    .tabla-scroll { overflow-x: auto; }
+
+    table { width: 100%; border-collapse: collapse; }
+
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      font-size: 11px;
+      border-bottom: 1px solid #eee;
+    }
+
+    th { background: #f5f7fa; color: #555; font-weight: 600; }
+
+    /* 9. Etiqueta de estado */
+    .estado {
+      display: inline-block;
+      background: #d4edda;
+      color: #1e6b34;
+      border: 1px solid #b7dfc1;
+      padding: 2px 8px;
+      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 600;
+    }
+
+    /* 10. Pantallas pequeñas */
+    @media (max-width: 700px) {
+      .layout { flex-direction: column; }
+      .menu { width: 100%; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+
+        /* 1. Reset y base */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", "Segoe UI", Arial, sans-serif;
+      background: #eef1f6;
+      color: #333;
+      font-size: 13px;
+    }
+
+    /* 2. Barra superior */
+    .topbar {
+      background: #35629a;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+    }
+
+    .topbar .marca { font-weight: 700; font-size: 14px; }
+    .topbar .sesion { font-size: 11px; }
+    .topbar .sesion a { color: #fff; text-decoration: none; }
+    .topbar .sesion a:hover { text-decoration: underline; }
+
+    /* 3. Estructura y menú lateral */
+    .layout {
+      display: flex;
+      gap: 14px;
+      padding: 10px;
+      align-items: flex-start;
+    }
+
+    .menu {
+      width: 140px;
+      flex-shrink: 0;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+      list-style: none;
+    }
+
+    .menu li { border-bottom: 1px solid #eee; }
+    .menu li:last-child { border-bottom: none; }
+
+    .menu a {
+      display: block;
+      padding: 9px 10px;
+      font-size: 11px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .menu a:hover { background: #f3f6fa; }
+
+    /* 4. Contenido */
+    .contenido {
+      flex: 1;
+      min-width: 0;
+      background: #fff;
+      border-radius: 6px;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+      padding: 22px 16px 30px;
+    }
+
+    .contenido h2 {
+      color: #2f5a8f;
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    /* 5. Formulario de nuevo producto */
+    .nuevo { padding: 0 14px; margin-bottom: 30px; }
+
+    .nuevo h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: #222;
+    }
+
+    .grid-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 12px;
+    }
+
+    .campo label {
+      display: block;
+      font-size: 11px;
+      margin-bottom: 6px;
+      color: #444;
+    }
+
+    .campo input,
+    .campo select,
+    .campo textarea {
+      width: 100%;
+      padding: 10px 8px;
+      font-family: inherit;
+      font-size: 12px;
+      border: 1px solid #dde2ea;
+      border-radius: 4px;
+      outline: none;
+      background: #fff;
+    }
+
+    .campo select { background: #eee; font-weight: 600; }
+    .campo textarea { height: 52px; resize: vertical; }
+    .campo input::placeholder,
+    .campo textarea::placeholder { color: #aaa; }
+
+    .campo input:focus,
+    .campo select:focus,
+    .campo textarea:focus {
+      border-color: #2f5a8f;
+      box-shadow: 0 0 0 3px rgba(47, 90, 143, 0.2);
+    }
+
+    .completo { grid-column: 1 / -1; }
+
+    /* 6. Botones */
+    .acciones-form { display: flex; gap: 10px; margin-top: 22px; }
+
+    .btn {
+      padding: 9px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .btn-primario { background: #2f5a8f; }
+    .btn-primario:hover { background: #264b77; }
+    .btn-secundario { background: #ddd; color: #333; padding: 9px 16px; }
+    .btn-secundario:hover { background: #ccc; }
+
+    /* 7. Barra de búsqueda */
+    .buscador { display: flex; gap: 8px; margin-bottom: 18px; }
+
+    .buscador input {
+      flex: 1;
+      padding: 10px 8px;
+      font-size: 11px;
+      border: 1px solid #dde2ea;
+      border-radius: 4px;
+      outline: none;
+    }
+
+    .buscador input:focus { border-color: #2f5a8f; }
+    .buscador .btn { font-weight: 500; padding: 10px 14px; }
+
+    /* 8. Tabla */
+    .tabla-scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+
+    th, td {
+      text-align: left;
+      padding: 11px 10px;
+      font-size: 11px;
+      border-bottom: 1px solid #eee;
+      white-space: nowrap;
+    }
+
+    th { background: #f5f7fa; color: #2f5a8f; font-weight: 700; }
+
+    /* 9. Botones de la tabla */
+    .btn-editar,
+    .btn-eliminar {
+      padding: 4px 8px;
+      font-size: 9px;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .btn-editar { background: #2f5a8f; }
+    .btn-eliminar { background: #c00000; }
+    .btn-editar:hover { background: #264b77; }
+    .btn-eliminar:hover { background: #9e0000; }
+
+    /* 10. Pantallas pequeñas */
+    @media (max-width: 700px) {
+      .layout { flex-direction: column; }
+      .menu { width: 100%; }
+      .grid-form { grid-template-columns: 1fr; }
+    }

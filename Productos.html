@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weirdo Comics - Productos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="marca">WEIRDO COMICS - Sistema de Gestión</div>
+    <div class="sesion">Bienvenido, Admin | <a href="#">Cerrar Sesión</a></div>
+  </header>
+
+  <div class="layout">
+
+    <nav>
+      <ul class="menu">
+        <li><a href="Dashboard.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Inventario.html">Inventario</a></li>
+        <li><a href="Proveedores.html">Proveedores</a></li>
+        <li><a href="Pedidos.html">Pedidos</a></li>
+        <li><a href="Ventas.html">Ventas</a></li>
+        <li><a href="Reportes.html">Reportes</a></li>
+        <li><a href="Usuarios.html">Usuarios</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenido">
+      <h2>Gestión de Productos</h2>
+
+      <!-- Formulario -->
+      <form class="nuevo">
+        <h3>Nuevo Producto</h3>
+
+        <div class="grid-form">
+          <div class="campo">
+            <label for="tipo">Tipo</label>
+            <select id="tipo">
+              <option>Cómic</option>
+              <option>Figura</option>
+              <option>Otro</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="titulo">Título/Nombre</label>
+            <input type="text" id="titulo" placeholder="Nombre del producto">
+          </div>
+
+          <div class="campo">
+            <label for="autor">Autor/Marca</label>
+            <input type="text" id="autor" placeholder="Autor o marca">
+          </div>
+
+          <div class="campo">
+            <label for="editorial">Editorial/Fabricante</label>
+            <input type="text" id="editorial" placeholder="Editorial">
+          </div>
+
+          <div class="campo">
+            <label for="costo">Precio Costo</label>
+            <input type="number" id="costo" step="0.01" placeholder="0.00">
+          </div>
+
+          <div class="campo">
+            <label for="venta">Precio Venta</label>
+            <input type="number" id="venta" step="0.01" placeholder="0.00">
+          </div>
+
+          <div class="campo">
+            <label for="isbn">ISBN/Código</label>
+            <input type="text" id="isbn" placeholder="ISBN o código">
+          </div>
+
+          <div class="campo">
+            <label for="stock">Stock Inicial</label>
+            <input type="number" id="stock" value="0" min="0">
+          </div>
+
+          <div class="campo completo">
+            <label for="descripcion">Descripción</label>
+            <textarea id="descripcion" placeholder="Descripción del producto"></textarea>
+          </div>
+        </div>
+
+        <div class="acciones-form">
+          <button type="submit" class="btn btn-primario">Guardar Producto</button>
+          <button type="reset" class="btn btn-secundario">Cancelar</button>
+        </div>
+      </form>
+
+      <!-- Búsqueda -->
+      <div class="buscador">
+        <input type="text" placeholder="Buscar por título, autor o ISBN...">
+        <button type="button" class="btn btn-primario">Filtrar</button>
+      </div>
+
+      <!-- Tabla -->
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Tipo</th>
+              <th>Título</th>
+              <th>Autor</th>
+              <th>Precio Venta</th>
+              <th>Stock</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#P-0001</td><td>Cómic</td><td>The Amazing Spider-Man</td>
+              <td>Stan Lee</td><td>$12.99</td><td>45</td>
+              <td>
+                <button class="btn-editar">Editar</button>
+                <button class="btn-eliminar">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#P-0002</td><td>Figura</td><td>Batman Figura</td>
+              <td>DC Comics</td><td>$25.50</td><td>12</td>
+              <td>
+                <button class="btn-editar">Editar</button>
+                <button class="btn-eliminar">Eliminar</button>
+              </td>
+            </tr>
+            <tr>
+              <td>#P-0003</td><td>Cómic</td><td>Fantastic Four</td>
+              <td>Jack Kirby</td><td>$9.99</td><td>28</td>
+              <td>
+                <button class="btn-editar">Editar</button>
+                <button class="btn-eliminar">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>

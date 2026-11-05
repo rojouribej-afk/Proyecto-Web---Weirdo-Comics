@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weirdo Comics - Dashboard</title>
+</head>
+<link rel="stylesheet" href="estilos.css">
+<body>
+
+  <header class="topbar">
+    <div class="marca">WEIRDO COMICS - Sistema de Gestión</div>
+    <div class="sesion">Bienvenido, Admin | <a href="#">Cerrar Sesión</a></div>
+  </header>
+
+  <div class="layout">
+
+    <nav>
+      <ul class="menu">
+        <li><a href="Dashboard.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Inventario.html">Inventario</a></li>
+        <li><a href="Proveedores.html">Proveedores</a></li>
+        <li><a href="Pedidos.html">Pedidos</a></li>
+        <li><a href="Ventas.html">Ventas</a></li>
+        <li><a href="Reportes.html">Reportes</a></li>
+        <li><a href="Usuarios.html">Usuarios</a></li>
+        <li><a href="Configuracion.html">Configuración</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenido">
+      <h2>Dashboard</h2>
+
+      <section class="stats">
+        <div class="stat"><span>Productos</span><strong>245</strong></div>
+        <div class="stat"><span>Stock Total</span><strong>1,852</strong></div>
+        <div class="stat"><span>Ventas Hoy</span><strong>$2,450</strong></div>
+        <div class="stat"><span>Pedidos Pendientes</span><strong>8</strong></div>
+      </section>
+
+      <section class="grafico">📊 Gráfico: Ventas últimos 30 días</section>
+
+      <h3>Últimas Ventas</h3>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>ID Venta</th>
+              <th>Fecha</th>
+              <th>Monto</th>
+              <th>Usuario</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>#V-0001</td><td>2024-10-04</td><td>$245.50</td>
+              <td>Juan Pérez</td><td><span class="estado">Completada</span></td>
+            </tr>
+            <tr>
+              <td>#V-0002</td><td>2024-10-04</td><td>$189.00</td>
+              <td>María López</td><td><span class="estado">Completada</span></td>
+            </tr>
+            <tr>
+              <td>#V-0003</td><td>2024-10-04</td><td>$312.75</td>
+              <td>Carlos Ruiz</td><td><span class="estado">Completada</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>
