@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weirdo Comics - Usuarios</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="marca">WEIRDO COMICS - Sistema de Gestión</div>
+    <div class="sesion">Bienvenido, Admin | <a href="login.html">Cerrar Sesión</a></div>
+  </header>
+
+  <div class="layout">
+    <nav>
+      <ul class="menu">
+        <li><a href="Dashboard.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Inventario.html">Inventario</a></li>
+        <li><a href="Proveedores.html">Proveedores</a></li>
+        <li><a href="Pedidos.html">Pedidos</a></li>
+        <li><a href="Ventas.html">Ventas</a></li>
+        <li><a href="Reportes.html">Reportes</a></li>
+        <li><a href="Usuarios.html">Usuarios</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenido">
+      <h2>Administración de Usuarios</h2>
+
+      <form class="nuevo">
+        <h3>Nuevo Usuario</h3>
+        <div class="grid-form">
+          <div class="campo">
+            <label for="nombre">Nombre completo</label>
+            <input type="text" id="nombre" placeholder="Nombre completo">
+          </div>
+          <div class="campo">
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" placeholder="usuario@weirdo.com">
+          </div>
+          <div class="campo">
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" placeholder="Teléfono">
+          </div>
+          <div class="campo">
+            <label for="rol">Rol</label>
+            <select id="rol"><option>Administrador</option><option>Cajero</option><option>Almacenista</option></select>
+          </div>
+          <div class="campo">
+            <label for="pass">Contraseña temporal</label>
+            <input type="password" id="pass" placeholder="Mínimo 8 caracteres">
+          </div>
+          <div class="campo">
+            <label for="pass2">Confirmar contraseña</label>
+            <input type="password" id="pass2" placeholder="Repetir contraseña">
+          </div>
+        </div>
+        <div class="acciones-form">
+          <button type="submit" class="btn btn-primario">Crear Usuario</button>
+          <button type="reset" class="btn btn-secundario">Cancelar</button>
+        </div>
+      </form>
+
+      <div class="buscador">
+        <input type="text" placeholder="Buscar usuario...">
+        <button type="button" class="btn btn-primario">Filtrar</button>
+      </div>
+
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Nombre</th><th>Correo</th><th>Rol</th><th>Último acceso</th><th>Estado</th><th>Acciones</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>#U-0001</td><td>Ivan Isay Guerra López</td><td>ivan@weirdo.com</td><td>Administrador</td><td>2024-10-04 09:30</td><td><span class="estado">Activo</span></td><td><button class="btn-editar">Editar</button> <button class="btn-eliminar">Desactivar</button></td></tr>
+            <tr><td>#U-0002</td><td>Juan Pérez García</td><td>juan@weirdo.com</td><td>Cajero</td><td>2024-10-04 08:45</td><td><span class="estado">Activo</span></td><td><button class="btn-editar">Editar</button> <button class="btn-eliminar">Desactivar</button></td></tr>
+            <tr><td>#U-0003</td><td>María López Rodríguez</td><td>maria@weirdo.com</td><td>Almacenista</td><td>2024-10-02 14:20</td><td><span class="estado">Activo</span></td><td><button class="btn-editar">Editar</button> <button class="btn-eliminar">Desactivar</button></td></tr>
+            <tr><td>#U-0004</td><td>Carlos Ruiz Sánchez</td><td>carlos@weirdo.com</td><td>Cajero</td><td>2024-10-02 11:05</td><td><span class="estado" style="background:#eceff1;color:#555;border-color:#cfd8dc">Inactivo</span></td><td><button class="btn-editar">Editar</button> <button class="btn-editar">Activar</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

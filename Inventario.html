@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weirdo Comics - Inventario</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="marca">WEIRDO COMICS - Sistema de Gestión</div>
+    <div class="sesion">Bienvenido, Admin | <a href="login.html">Cerrar Sesión</a></div>
+  </header>
+
+  <div class="layout">
+    <nav>
+      <ul class="menu">
+        <li><a href="Dashboard.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Inventario.html">Inventario</a></li>
+        <li><a href="Proveedores.html">Proveedores</a></li>
+        <li><a href="Pedidos.html">Pedidos</a></li>
+        <li><a href="Ventas.html">Ventas</a></li>
+        <li><a href="Reportes.html">Reportes</a></li>
+        <li><a href="Usuarios.html">Usuarios</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenido">
+      <h2>Control de Inventario</h2>
+
+      <div class="buscador">
+        <input type="text" placeholder="Buscar producto...">
+        <button type="button" class="btn btn-primario">Stock bajo</button>
+        <button type="button" class="btn btn-secundario">Exportar inventario</button>
+      </div>
+
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr><th>Producto</th><th>Stock actual</th><th>Stock mínimo</th><th>Stock máximo</th><th>Estado</th><th>Última entrada</th><th>Acciones</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>The Amazing Spider-Man</td><td>45</td><td>20</td><td>100</td><td><span class="estado">Normal</span></td><td>2024-10-01</td><td><button class="btn-editar">Ajustar</button></td></tr>
+            <tr><td>Batman Figura</td><td>-5</td><td>10</td><td>50</td><td><span class="estado" style="background:#fdecea;color:#b71c1c;border-color:#f5c2c0">Agotado</span></td><td>2024-09-28</td><td><button class="btn-editar">Ajustar</button></td></tr>
+            <tr><td>Fantastic Four</td><td>28</td><td>15</td><td>80</td><td><span class="estado">Normal</span></td><td>2024-10-02</td><td><button class="btn-editar">Ajustar</button></td></tr>
+            <tr><td>Superman Poder</td><td>2</td><td>8</td><td>30</td><td><span class="estado" style="background:#fff8e1;color:#7a5a00;border-color:#f5d676">Crítico</span></td><td>2024-09-30</td><td><button class="btn-editar">Ajustar</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <form class="nuevo" style="margin-top:30px">
+        <h3>Ajuste manual de existencias</h3>
+        <div class="grid-form">
+          <div class="campo">
+            <label for="producto">Producto</label>
+            <select id="producto"><option>The Amazing Spider-Man</option><option>Batman Figura</option><option>Fantastic Four</option><option>Superman Poder</option></select>
+          </div>
+          <div class="campo">
+            <label for="tipo">Tipo de ajuste</label>
+            <select id="tipo"><option>Entrada</option><option>Salida</option><option>Corrección</option></select>
+          </div>
+          <div class="campo">
+            <label for="cantidad">Cantidad</label>
+            <input type="number" id="cantidad" min="0" placeholder="0">
+          </div>
+          <div class="campo completo">
+            <label for="motivo">Motivo</label>
+            <textarea id="motivo" placeholder="Motivo del ajuste"></textarea>
+          </div>
+        </div>
+        <div class="acciones-form">
+          <button type="submit" class="btn btn-primario">Aplicar ajuste</button>
+          <button type="reset" class="btn btn-secundario">Cancelar</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weirdo Comics - Pedidos</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="marca">WEIRDO COMICS - Sistema de Gestión</div>
+    <div class="sesion">Bienvenido, Admin | <a href="login.html">Cerrar Sesión</a></div>
+  </header>
+
+  <div class="layout">
+    <nav>
+      <ul class="menu">
+        <li><a href="Dashboard.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Inventario.html">Inventario</a></li>
+        <li><a href="Proveedores.html">Proveedores</a></li>
+        <li><a href="Pedidos.html">Pedidos</a></li>
+        <li><a href="Ventas.html">Ventas</a></li>
+        <li><a href="Reportes.html">Reportes</a></li>
+        <li><a href="Usuarios.html">Usuarios</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenido">
+      <h2>Gestión de Pedidos</h2>
+
+      <form class="nuevo">
+        <h3>Nuevo Pedido</h3>
+        <div class="grid-form">
+          <div class="campo">
+            <label for="proveedor">Proveedor</label>
+            <select id="proveedor"><option>Marvel Comics Distributor</option><option>DC Comics Latinoamérica</option></select>
+          </div>
+          <div class="campo">
+            <label for="producto">Producto</label>
+            <select id="producto"><option>The Amazing Spider-Man</option><option>Batman Figura</option><option>Fantastic Four</option></select>
+          </div>
+          <div class="campo">
+            <label for="cantidad">Cantidad</label>
+            <input type="number" id="cantidad" min="1" placeholder="0">
+          </div>
+          <div class="campo">
+            <label for="precio">Precio unitario</label>
+            <input type="number" id="precio" step="0.01" placeholder="0.00">
+          </div>
+          <div class="campo">
+            <label for="entrega">Fecha de entrega esperada</label>
+            <input type="date" id="entrega">
+          </div>
+          <div class="campo">
+            <label for="obs">Observaciones</label>
+            <input type="text" id="obs" placeholder="Observaciones">
+          </div>
+        </div>
+        <div class="acciones-form">
+          <button type="submit" class="btn btn-primario">Crear Pedido</button>
+          <button type="reset" class="btn btn-secundario">Cancelar</button>
+        </div>
+      </form>
+
+      <div class="buscador">
+        <input type="text" placeholder="Buscar pedido...">
+        <button type="button" class="btn btn-primario">Filtrar</button>
+      </div>
+
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr><th>ID Pedido</th><th>Proveedor</th><th>Fecha</th><th>Total</th><th>Entrega esperada</th><th>Estado</th><th>Acciones</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>#PED-0001</td><td>Marvel Comics Distributor</td><td>2024-10-03</td><td>$1,200.00</td><td>2024-10-10</td><td><span class="estado" style="background:#e3f2fd;color:#0d47a1;border-color:#bbdefb">Enviado</span></td><td><button class="btn-editar">Detalles</button> <button class="btn-editar">Recibido</button></td></tr>
+            <tr><td>#PED-0002</td><td>DC Comics Latinoamérica</td><td>2024-10-02</td><td>$850.00</td><td>2024-10-08</td><td><span class="estado">Recibido</span></td><td><button class="btn-editar">Detalles</button></td></tr>
+            <tr><td>#PED-0003</td><td>Marvel Comics Distributor</td><td>2024-10-04</td><td>$2,100.00</td><td>2024-10-15</td><td><span class="estado" style="background:#eceff1;color:#555;border-color:#cfd8dc">Creado</span></td><td><button class="btn-editar">Detalles</button> <button class="btn-editar">Enviar</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

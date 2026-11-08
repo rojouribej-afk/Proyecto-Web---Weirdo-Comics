@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weirdo Comics - Nueva Venta</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="marca">WEIRDO COMICS - Sistema de Gestión</div>
+    <div class="sesion">Bienvenido, Vendedor | <a href="login.html">Cerrar Sesión</a></div>
+  </header>
+
+  <div class="layout">
+    <nav>
+      <ul class="menu">
+        <li><a href="Dashboard.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Inventario.html">Inventario</a></li>
+        <li><a href="Proveedores.html">Proveedores</a></li>
+        <li><a href="Pedidos.html">Pedidos</a></li>
+        <li><a href="Ventas.html">Ventas</a></li>
+        <li><a href="Reportes.html">Reportes</a></li>
+        <li><a href="Usuarios.html">Usuarios</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenido">
+      <h2>Nueva Venta</h2>
+
+      <div class="buscador">
+        <input type="text" placeholder="Buscar producto por título o código...">
+        <button type="button" class="btn btn-primario">Agregar</button>
+      </div>
+
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr><th>Producto</th><th>Precio unit.</th><th>Cantidad</th><th>Subtotal</th><th>Acción</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>The Amazing Spider-Man</td><td>$12.99</td><td>2</td><td>$25.98</td><td><button class="btn-eliminar">Quitar</button></td></tr>
+            <tr><td>Batman Figura</td><td>$25.50</td><td>1</td><td>$25.50</td><td><button class="btn-eliminar">Quitar</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <form class="nuevo" style="margin-top:30px">
+        <h3>Cobro</h3>
+        <div class="grid-form">
+          <div class="campo">
+            <label for="pago">Forma de pago</label>
+            <select id="pago"><option>Efectivo</option><option>Tarjeta</option><option>Transferencia</option></select>
+          </div>
+          <div class="campo">
+            <label for="monto">Monto pagado</label>
+            <input type="number" id="monto" step="0.01" placeholder="0.00">
+          </div>
+          <div class="campo completo">
+            <div class="estado" style="display:block;padding:12px;font-size:12px;background:#f5f7fa;color:#333;border-color:#dde2ea">
+              Subtotal: $51.48 &nbsp;|&nbsp; Descuento (10% si son 5 o más cómics): $0.00 &nbsp;|&nbsp; Cambio: $0.00 &nbsp;|&nbsp; <strong>Total: $51.48</strong>
+            </div>
+          </div>
+        </div>
+        <div class="acciones-form">
+          <button type="submit" class="btn btn-primario">Completar Venta</button>
+          <button type="reset" class="btn btn-secundario">Cancelar</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+</body>
+</html>

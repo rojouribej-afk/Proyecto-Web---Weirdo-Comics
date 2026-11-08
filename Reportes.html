@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weirdo Comics - Reportes</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="marca">WEIRDO COMICS - Sistema de Gestión</div>
+    <div class="sesion">Bienvenido, Admin | <a href="login.html">Cerrar Sesión</a></div>
+  </header>
+
+  <div class="layout">
+    <nav>
+      <ul class="menu">
+        <li><a href="Dashboard.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Inventario.html">Inventario</a></li>
+        <li><a href="Proveedores.html">Proveedores</a></li>
+        <li><a href="Pedidos.html">Pedidos</a></li>
+        <li><a href="Ventas.html">Ventas</a></li>
+        <li><a href="Reportes.html">Reportes</a></li>
+        <li><a href="Usuarios.html">Usuarios</a></li>
+      </ul>
+    </nav>
+
+    <main class="contenido">
+      <h2>Reportes</h2>
+
+      <form class="nuevo">
+        <div class="grid-form">
+          <div class="campo">
+            <label for="tipo">Tipo de reporte</label>
+            <select id="tipo"><option>Ventas</option><option>Inventario</option><option>Proveedores</option><option>Pedidos</option></select>
+          </div>
+          <div class="campo">
+            <label for="inicio">Fecha inicio</label>
+            <input type="date" id="inicio" value="2024-10-01">
+          </div>
+          <div class="campo">
+            <label for="fin">Fecha fin</label>
+            <input type="date" id="fin" value="2024-10-04">
+          </div>
+        </div>
+        <div class="acciones-form">
+          <button type="submit" class="btn btn-primario">Generar</button>
+          <button type="button" class="btn btn-secundario">Descargar PDF</button>
+          <button type="button" class="btn btn-secundario">Descargar Excel</button>
+        </div>
+      </form>
+
+      <section class="grafico" style="margin-top:24px">📊 Gráfica: Ventas por día</section>
+
+      <h3 style="margin:22px 0 14px;font-size:14px">Detalle del reporte de ventas</h3>
+      <div class="tabla-scroll">
+        <table>
+          <thead>
+            <tr><th>Fecha</th><th>Número de venta</th><th>Producto</th><th>Cantidad</th><th>Precio unitario</th><th>Subtotal</th><th>Vendedor</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2024-10-04</td><td>#V-0001</td><td>The Amazing Spider-Man</td><td>2</td><td>$12.99</td><td>$25.98</td><td>Juan Pérez</td></tr>
+            <tr><td>2024-10-04</td><td>#V-0001</td><td>Batman Figura</td><td>1</td><td>$25.50</td><td>$25.50</td><td>Juan Pérez</td></tr>
+            <tr><td>2024-10-04</td><td>#V-0002</td><td>Fantastic Four</td><td>3</td><td>$9.99</td><td>$29.97</td><td>María López</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="5"><strong>Total</strong></td><td><strong>$81.45</strong></td><td></td></tr>
+          </tfoot>
+        </table>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

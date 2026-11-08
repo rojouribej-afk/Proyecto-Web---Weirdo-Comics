@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proveedores - Weirdo Comics</title>
+  <link rel="stylesheet" href="../estilos.css">
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="brand">WEIRDO COMICS</div>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="productos.html">Productos</a>
+      <a href="inventario.html">Inventario</a>
+      <a href="proveedores.html" class="active">Proveedores</a>
+      <a href="pedidos.html">Pedidos</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="reportes.html">Reportes</a>
+      <a href="usuarios.html">Usuarios</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="topbar">
+      <span>WEIRDO COMICS · Sistema de Gestión</span>
+      <span>Bienvenido, Admin | <a href="login.html">Cerrar Sesión</a></span>
+    </header>
+
+    <main class="content">
+      <h1>Gestión de Proveedores</h1>
+
+      <div class="card">
+        <h2>Nuevo Proveedor</h2>
+        <div class="grid-form">
+          <div class="campo">
+            <label>Nombre de empresa</label>
+            <input type="text" placeholder="Nombre del proveedor">
+          </div>
+          <div class="campo">
+            <label>RFC / CNT</label>
+            <input type="text" placeholder="RFC o CNT">
+          </div>
+          <div class="campo">
+            <label>Teléfono</label>
+            <input type="text" placeholder="Teléfono">
+          </div>
+          <div class="campo">
+            <label>Correo electrónico</label>
+            <input type="text" placeholder="correo@proveedor.com">
+          </div>
+          <div class="campo">
+            <label>Dirección</label>
+            <input type="text" placeholder="Dirección completa">
+          </div>
+          <div class="campo">
+            <label>Ciudad</label>
+            <input type="text" placeholder="Ciudad">
+          </div>
+          <div class="campo ancho-completo">
+            <label>Términos comerciales</label>
+            <textarea placeholder="Condiciones acordadas..."></textarea>
+          </div>
+        </div>
+        <div class="acciones">
+          <button class="btn" type="button">Guardar Proveedor</button>
+          <button class="btn btn-sec" type="button">Cancelar</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Directorio de proveedores</h2>
+        <div class="toolbar">
+          <input type="text" placeholder="Buscar proveedor...">
+        </div>
+        <div class="tabla-wrap">
+          <table>
+            <thead>
+              <tr><th>Empresa</th><th>RFC / CNT</th><th>Teléfono</th><th>Correo</th><th>Ciudad</th><th>Estado</th><th>Acciones</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Marvel Comics Distributor</td><td>MCD-123456</td><td>(555) 123-4567</td><td>contacto@marveldist.com</td><td>CDMX</td><td><span class="badge b-ok">Activo</span></td><td><button class="btn btn-sm">Editar</button> <button class="btn btn-sm btn-danger">Inactivar</button></td></tr>
+              <tr><td>DC Comics Latinoamérica</td><td>DCL-654321</td><td>(555) 987-6543</td><td>ventas@dclatam.com</td><td>Monterrey</td><td><span class="badge b-ok">Activo</span></td><td><button class="btn btn-sm">Editar</button> <button class="btn btn-sm btn-danger">Inactivar</button></td></tr>
+              <tr><td>Image Comics Import</td><td>ICI-112233</td><td>(555) 456-7890</td><td>pedidos@imageimport.mx</td><td>Guadalajara</td><td><span class="badge b-gris">Inactivo</span></td><td><button class="btn btn-sm">Editar</button> <button class="btn btn-sm btn-ok">Activar</button></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>
